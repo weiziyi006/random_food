@@ -1,0 +1,83 @@
+{
+  "setting": {
+    "urlCheck": false,
+    "compileHotReLoad": false
+  },
+  "projectname": "舌尖盲旅",
+  "condition": {
+    "miniprogram": {
+      "list": [
+        {
+          "name": "pages/advise/advise",
+          "pathName": "pages/advise/advise",
+          "query": "",
+          "scene": null,
+          "launchMode": "default"
+        },
+        {
+          "name": "pages/rank/rank",
+          "pathName": "pages/rank/rank",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/record/record",
+          "pathName": "pages/record/record",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/user_feedback/user_feedback",
+          "pathName": "pages/user_feedback/user_feedback",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/total_counts/total_counts",
+          "pathName": "pages/total_counts/total_counts",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/feedback/feedback",
+          "pathName": "pages/feedback/feedback",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/collect/collect",
+          "pathName": "pages/collect/collect",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/my/my",
+          "pathName": "pages/my/my",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/random2/random2",
+          "pathName": "pages/random2/random2",
+          "query": "foodData=%257B%2522category_name%2522%253A%2522%25E9%25BA%25BB%25E8%25BE%25A3%25E9%25A6%2599%25E9%2594%2585%2522%252C%2522shop_name%2522%253A%2522%25E8%2588%258C%25E5%25B0%2596%25E5%25A5%2587%25E5%25A6%2599%25E9%25BA%25BB%25E8%25BE%25A3%25E9%25A6%2599%25E9%2594%2585%2522%252C%2522address%2522%253A%2522%25E4%25B8%2580%25E9%25A4%2590%25E4%25BA%258C%25E6%25A5%25BC%2522%252C%2522msg%2522%253A%2522%25E6%258A%25BD%25E5%258F%2596%25E6%2588%2590%25E5%258A%259F%2522%257D",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/random1/random1",
+          "pathName": "pages/random1/random1",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

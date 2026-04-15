@@ -1,0 +1,46 @@
+<view class="page">
+  <view class="bg-decoration top-left"></view>
+  <view class="bg-decoration bottom-right"></view>
+  <view wx:if="{{!result}}" class="empty-container">
+    <view class="title-wrapper">
+      <text class="main-title">美食盲盒</text>
+      <text class="sub-title">为你解锁今日专属美食惊喜</text>
+    </view>
+    <view class="illustration">🍽️</view>
+    <button bindtap="openTagModal" class="start-btn">开始抽取</button>
+  </view>
+  <view wx:if="{{result}}" class="result-container">
+    <view class="result-card">
+      <view class="weather-box">
+        <view class="weather-icon">{{weather.icon}}</view>
+        <view class="weather-text">{{weather.weather}}</view>
+        <view class="weather-temp">{{weather.temp}}°C</view>
+      </view>
+      <view class="mood-text">{{moodText}}</view>
+      <image class="shop-img" src="{{result.image_url}}" mode="aspectFill"></image>
+      <view class="shop-name">{{result.shop_name}}</view>
+      <view class="shop-info">{{result.address}}</view>
+      <view class="shop-score">⭐ 评分：{{result.score}}</view>
+      <view class="label-actions">
+        <view class="action-group" bindtap="onCollectTap">
+          {{shopStatus.isCollected ? '已收藏 💖' : '喜欢就收藏起来吧 🤍'}}
+        </view>
+      </view>
+      <button bindtap="resetAll" class="again-btn">返回</button>
+    </view>
+  </view>
+  <view wx:if="{{showTagModal}}" class="tag-modal">
+    <view class="modal-content">
+      <view class="modal-title">选择一种口味（可不选）</view>
+      <view class="tag-group">
+        <view wx:for="{{tagList}}" wx:key="name" class="tag {{item.selected ? 'act' : ''}}" bindtap="toggleTag" data-name="{{item.name}}">
+          {{item.name}}
+        </view>
+      </view>
+      <view class="modal-actions">
+        <button bindtap="closeTagModal" class="cancel-btn">取消</button>
+        <button bindtap="getResult" loading="{{loading}}" class="confirm-btn">智能抽取</button>
+      </view>
+    </view>
+  </view>
+</view>

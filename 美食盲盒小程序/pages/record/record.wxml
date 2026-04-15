@@ -1,0 +1,17 @@
+<view class="container">
+  <view class="content">
+    <view wx:if="{{isLoading}}" class="loading">加载中...</view>
+    <view wx:elif="{{records.length == 0}}" class="empty">
+      <text>暂无抽取记录</text>
+    </view>
+    <view wx:else class="list">
+      <view wx:for="{{records}}" wx:key="id" class="item" style="height: 195rpx; display: flex; box-sizing: border-box; align-items: center;">
+        <view class="shop-info">
+          <view class="cate">{{item.category_name}}</view>
+          <view class="shop">{{item.shop_name}}</view>
+          <view class="addr">{{item.address}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

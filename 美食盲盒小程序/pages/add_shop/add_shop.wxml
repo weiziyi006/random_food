@@ -1,0 +1,21 @@
+<view class="container">
+  <view class="header">
+    <text class="title">添加新店铺</text>
+  </view>
+  <view class="input-section">
+    <input
+      class="input"
+      placeholder="请输入店铺名称"
+      value="{{shopName}}"
+      bindinput="inputChange"
+    />
+    <button class="add-btn" bindtap="submitForm">添加</button>
+  </view>
+  <view class="list-section">
+    <text class="list-title">已有的店铺</text>
+    <view class="list-item" wx:for="{{shopList}}" wx:key="shopid">
+      <text class="item-id">ID: {{item.shopid}}</text>
+      <text class="item-name">{{item.shop_name}}</text>
+    </view>
+  </view>
+</view>

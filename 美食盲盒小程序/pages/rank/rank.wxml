@@ -1,0 +1,52 @@
+<view class="container">
+  <view class="slogan">
+    <text>好吃的标准，从来都只在你心里</text>
+  </view>
+  <view class="top-three" wx:if="{{rankList.length >= 3}}">
+    <view class="podium-card first">
+      <view class="badge">🥇</view>
+      <view class="shop-name">{{rankList[0].shop_name}}</view>
+      <view class="cate">{{rankList[0].category_name}}</view>
+      <view class="score-row">
+        <text class="star">★</text>
+        <text class="score">{{rankList[0].score}}</text>
+      </view>
+    </view>
+    <view class="podium-card second">
+      <view class="badge">🥈</view>
+      <view class="shop-name">{{rankList[1].shop_name}}</view>
+      <view class="cate">{{rankList[1].category_name}}</view>
+      <view class="score-row">
+        <text class="star">★</text>
+        <text class="score">{{rankList[1].score}}</text>
+      </view>
+    </view>
+    <view class="podium-card third">
+      <view class="badge">🥉</view>
+      <view class="shop-name">{{rankList[2].shop_name}}</view>
+      <view class="cate">{{rankList[2].category_name}}</view>
+      <view class="score-row">
+        <text class="star">★</text>
+        <text class="score">{{rankList[2].score}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="rank-list" wx:if="{{rankList.length > 3}}">
+    <view 
+      wx:for="{{rankList}}" 
+      wx:key="shop_name"
+      wx:if="{{index >= 3}}"
+      class="rank-item"
+    >
+      <view class="shop-info">
+        <view class="cate">{{item.category_name}}</view>
+        <view class="shop">{{item.shop_name}}</view>
+        <view class="addr">{{item.address}}</view>
+      </view>
+      <view class="score-row">
+        <text class="star">★</text>
+        <text class="score">{{item.score}}</text>
+      </view>
+    </view>
+  </view>
+</view>

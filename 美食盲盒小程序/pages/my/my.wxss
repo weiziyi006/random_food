@@ -1,0 +1,121 @@
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #fff9f5 0%, #fcfcfc 100%);
+  padding: 24rpx;
+  box-sizing: border-box;
+}
+.top-banner {
+  width: 100%;
+  height: 380rpx;
+  background: #fff;
+  border-radius: 40rpx;
+  position: relative;
+  margin-bottom: 50rpx;
+  box-shadow: 0 12rpx 32rpx rgba(0,0,0,0.05);
+  overflow: hidden;
+}
+.top-banner::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255,255,255,0.7), rgba(255,255,255,0.2));
+  z-index: 2;
+}
+.banner-text {
+  position: absolute;
+  left: 44rpx;
+  top: 50rpx;
+  z-index: 99;
+}
+.welcome {
+  display: block;
+  font-size: 52rpx;
+  font-weight: 700;
+  color: #3d4a5c;
+  margin-bottom: 16rpx;
+  letter-spacing: 2rpx;
+  text-shadow: 0 2rpx 6rpx rgba(0,0,0,0.05);
+}
+.title-name {
+  font-size: 50rpx;
+  font-weight: 600;
+  color: #ff9a7b;
+  letter-spacing: 1rpx;
+  text-shadow: 0 2rpx 4rpx rgba(255,154,123,0.15);
+}
+.banner-img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.btn-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 40rpx;
+}
+.btn-item {
+  width: 320rpx;
+  height: 260rpx;
+  background: linear-gradient(145deg, #ffffff, #fffbf8);
+  border-radius: 42rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10rpx 28rpx rgba(255,150,120,0.06), 0 2rpx 8rpx rgba(0,0,0,0.03);
+  position: relative;
+  transition: all 0.25s ease;
+}
+.btn-item::before {
+  content: '';
+  position: absolute;
+  top: 2rpx;
+  left: 2rpx;
+  right: 2rpx;
+  height: 60%;
+  border-radius: 42rpx;
+  background: linear-gradient(to bottom, rgba(255,255,255,0.6), transparent);
+  z-index: 1;
+}
+.icon-box {
+  width: 130rpx;
+  height: 130rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24rpx;
+  position: relative;
+  z-index: 2;
+}
+.icon-img {
+  width: 110rpx;
+  height: 110rpx;
+  object-fit: contain;
+  filter: drop-shadow(0 6rpx 12rpx rgba(255,140,110,0.1));
+}
+.btn-text {
+  font-size: 30rpx;
+  color: #444;
+  font-weight: 500;
+  letter-spacing: 1rpx;
+  position: relative;
+  z-index: 2;
+}
+.btn-item:active {
+  transform: scale(0.96);
+  box-shadow: 0 6rpx 16rpx rgba(255,150,120,0.08);
+}

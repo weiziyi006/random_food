@@ -1,0 +1,37 @@
+<view class="container" style="width: 750rpx; display: block; box-sizing: border-box; height: 120rpx">
+  <view class="top-banner" style="position: relative; left: 0rpx; top: 4rpx; height: 425rpx; display: block; box-sizing: border-box">
+    <view class="banner-text">
+      <text class="welcome" style="width: 702rpx; display: block; box-sizing: content-box">Welcome</text>
+      <text class="title-name">MEISHIMANGLV</text>
+    </view>
+    <view class="banner-img">
+      <image src="/images/cover.jpg" class="banner-image"></image>
+    </view>
+  </view>
+  <view class="btn-wrap">
+    <view class="btn-item" bindtap="goFeedback" style="position: relative; left: 8rpx; top: 0rpx">
+      <view class="icon-box">
+        <image src="/images/feedback.png" class="icon-img"></image>
+      </view>
+      <text class="btn-text">建议反馈</text>
+    </view>
+    <view class="btn-item" bindtap="goRank" style="position: relative; left: -8rpx; top: 0rpx">
+      <view class="icon-box">
+        <image src="/images/rank.png" class="icon-img"></image>
+      </view>
+      <text class="btn-text">店铺排行</text>
+    </view>
+    <view class="btn-item" bindtap="goCollect" style="position: relative; left: 8rpx; top: 0rpx">
+      <view class="icon-box">
+        <image src="/images/collect.png" class="icon-img"></image>
+      </view>
+      <text class="btn-text">收藏店铺</text>
+    </view>
+    <view class="btn-item" bindtap="goRecord" style="position: relative; left: -8rpx; top: 0rpx">
+      <view class="icon-box">
+        <image src="/images/record.png" class="icon-img"></image>
+      </view>
+      <text class="btn-text">盲盒记录</text>
+    </view>
+  </view>
+</view>

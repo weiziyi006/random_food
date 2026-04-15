@@ -1,0 +1,20 @@
+<view class="page-container">
+  <view class="content">
+    <view class="section-title">内容</view>
+    <textarea style="width: 689rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx; height: 256rpx"
+      class="input-area"
+      placeholder="如果您对产品有任何需求或建议，可在此编辑内容发送给我们，如果不介意，您可以留下您的邮箱，我们收到反馈后，也将根据情况回寄邮箱进行答复。"
+      value="{{content}}"
+      bindinput="onContentInput"
+    />
+  <view class="email">
+    <view class="section-title">邮箱</view>
+    <input class="email-input"
+      placeholder="请输入您的邮箱"
+      value="{{email}}"
+      bindinput="onEmailInput"
+    />
+    </view>
+  </view>
+  <view class="submit-btn" bindtap="submitFeedback">提交</view>
+</view>

@@ -1,0 +1,61 @@
+<view class="container">
+  <view class="food-card {{food ? 'show' : ''}}">
+    <view class="card-header">
+      <view class="header-icon">🎁</view>
+      <view class="header-title">抽取结果</view>
+    </view>
+    <view class="card-content" wx:if="{{food}}">
+      <view class="info-item">
+        <view class="item-icon bg-category">🍱</view>
+        <view class="item-wrap">
+          <view class="item-label">菜品品类</view>
+          <view class="item-value">{{food.category_name}}</view>
+        </view>
+      </view>
+      <view class="info-item">
+        <view class="item-icon bg-shop">🏪</view>
+        <view class="item-wrap">
+          <view class="label-with-actions">
+            <text class="item-label">推荐店铺</text>
+            <view class="label-actions">
+              <view class="action-group" bindtap="onCollectTap">
+                {{shopStatus.isCollected?'💖':'🤍'}}
+              </view>
+            </view>
+          </view>
+          <view class="item-value">{{food.shop_name}}</view>
+        </view>
+      </view>
+      <view class="info-item">
+        <view class="item-icon bg-address">📍</view>
+        <view class="item-wrap">
+          <view class="item-label">店铺地址</view>
+          <view class="item-value">{{food.address}}</view>
+        </view>
+      </view>
+    </view>
+    <view wx:else class="empty-tip">正在加载盲盒结果...</view>
+    <view class="card-buttons" wx:if="{{food}}">
+      <button class="btn btn-food" bindtap="onChangeFoodTap">
+        <view class="btn-text">换个菜品</view>
+      </button>
+      <button class="btn btn-shop" bindtap="onChangeShopTap">
+        <view class="btn-text">更换店铺</view>
+      </button>
+    </view>
+    <view class="card-footer" wx:if="{{food}}">
+      <button class="btn-back"catchtap="onBackTap" hover-class="none" data-weui-attach="">
+        <view class="back-text">返回主页</view>
+      </button>
+    </view>
+  </view>
+  <view class="bottom-foreground">
+    <view class="wave-shape wave-1" style="height: 187rpx; display: block; box-sizing: border-box; left: -100rpx; top: 143rpx"></view>
+    <view class="wave-shape wave-2" style="width: 300rpx; display: block; box-sizing: border-box; left: 200rpx; top: 200rpx"></view>
+    <view class="wave-shape wave-3" style="height: 316rpx; display: block; box-sizing: border-box; left: 429rpx; top: 50rpx"></view>
+  </view>
+  <view class="fairy-container">
+    <image class="fairy-img" src="https://s41.ax1x.com/2026/01/29/pZfCUdP.png" mode="widthFix"></image>
+    <view class="fairy-speech">{{currentFairyText}}</view>
+  </view>
+</view>

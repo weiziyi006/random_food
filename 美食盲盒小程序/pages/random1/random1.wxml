@@ -1,0 +1,32 @@
+<view class="container"  style="position: relative; left: 0rpx; top: 0rpx">
+  <!-- 标题区域 -->
+  <view class="title" style="position: relative; left: 0rpx; top: -178rpx; height: 227rpx; display: block; box-sizing: border-box; width: 395rpx">
+    <view class="title-text1" style="width: 664rpx; display: block; box-sizing: border-box; position: relative; left: -135rpx; top: 93rpx">今日份美食盲盒已就位</view>
+    <view class="title-text2" style="width: 664rpx; display: block; box-sizing: border-box; position: relative; left: -135rpx; top: 114rpx">快快拆出你的美味！</view>
+  </view>
+  <!-- 美食图标圆形环绕层 -->
+  <view class="food-circle-container" style="position: relative; height: 181rpx; display: block; box-sizing: border-box; left: 49rpx; top: 237rpx; width: 341rpx">
+    <view class="float-food-item item-0" style="position: absolute; left: 267rpx; top: -250rpx; height: 140rpx; display: block; box-sizing: border-box">🍹</view>
+    <view class="float-food-item item-1" style="position: absolute; left: 484rpx; top: -184rpx">🍦</view>
+    <view class="float-food-item item-2" style="position: absolute; left: 547rpx; top: 230rpx">🥘</view>
+    <view class="float-food-item item-3" style="position: absolute; left: -3rpx; top: 228rpx">🍔</view>
+    <view class="float-food-item item-4" style="position: absolute; left: 267rpx; top: 363rpx; height: 178rpx; display: block; box-sizing: border-box">🍕</view>
+    <view class="float-food-item item-5" style="position: absolute; left: 30rpx; top: -186rpx">🍛</view>
+    <view class="float-food-item item-6" style="position: absolute; left: -60rpx; top: 9rpx">🍝</view>
+    <view class="float-food-item item-7" style="position: absolute; left: 578rpx; top: 38rpx">🍲</view>
+  </view>
+  <view class="cube-wrapper" style="width: 341rpx; height: 524rpx; display: block; box-sizing: border-box; left: 0rpx; top: -87rpx; position: relative">
+    <view class="cube rotate-3d">
+      <view class="cube-face front"><image class="cube-img" src="https://s41.ax1x.com/2026/01/29/pZfCNZt.png" /></view>
+      <view class="cube-face right"><image class="cube-img" src="https://s41.ax1x.com/2026/01/29/pZfCNZt.png" /></view>
+      <view class="cube-face left"><image class="cube-img" src="https://s41.ax1x.com/2026/01/29/pZfCNZt.png" /></view>
+      <view class="cube-face back"><image class="cube-img" src="https://s41.ax1x.com/2026/01/29/pZfCNZt.png" /></view>
+      <view class="cube-face top"></view>
+      <view class="cube-face bottom"></view>
+    </view>
+    <view class="cube-light" style="position: absolute; left: 171rpx; top: 140rpx"></view>
+    <view class="cube-light cube-light-second" style="position: absolute; left: 170rpx; top: 140rpx; width: 452rpx; height: 446rpx; display: block; box-sizing: border-box"></view>
+  </view>
+    <!-- 进入选餐按钮 -->
+    <button class="open-btn" bindtap="openBlindBox" style="position: relative; left: 1rpx; top: -93rpx; width: 281rpx; display: flex; box-sizing: border-box; height: 124rpx">点我选餐</button>
+</view>

@@ -1,0 +1,40 @@
+.container {
+  background: #fff5f5;
+  min-height: 100vh;
+  padding: 20rpx 30rpx;
+}
+.loading, .empty {
+  text-align: center;
+  margin-top: 200rpx;
+  color: #999;
+}
+.list {
+  margin-top: 20rpx;
+}
+.item {
+  background: #fff;
+  border-radius: 20rpx;
+  padding: 30rpx;
+  margin-bottom: 20rpx;
+  display: flex;
+  align-items: center;
+}
+.shop-info {
+  flex: 1;
+}
+.cate {
+  font-size: 24rpx;
+  color: #ff6b6b;
+  margin-bottom: 8rpx;
+}
+.shop {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 8rpx;
+}
+.addr {
+  font-size: 26rpx;
+  color: #666;
+  line-height: 1.4;
+}

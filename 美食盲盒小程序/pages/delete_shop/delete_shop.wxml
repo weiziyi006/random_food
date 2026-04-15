@@ -1,0 +1,52 @@
+<view class="container">
+  <!-- 页面标题 -->
+  <view class="page-header">
+    <text class="title">删除店铺</text>
+  </view>
+  <!-- 搜索栏 -->
+  <view class="search-container">
+    <input
+      class="search-input"
+      placeholder="搜索店铺名称或ID"
+      value="{{searchValue}}"
+      bindinput="onSearchInput"
+    />
+    <icon type="search" size="18" color="#FF7A2F" class="search-icon" />
+  </view>
+  <!-- 店铺列表 -->
+  <view class="shop-list">
+    <view
+      wx:for="{{filteredshops}}"
+      wx:key="shopid"
+      class="shop-item {{item.checked ? 'shop-item-checked' : ''}}"
+      bindtap="onItemTap"
+      data-id="{{item.shopid}}"
+      data-checked="{{item.checked}}"
+    >
+      <view class="checkbox-wrapper">
+        <checkbox
+          value="{{item.shopid}}"
+          checked="{{item.checked}}"
+        />
+      </view>
+      <view class="shop-info">
+        <text class="shop-id">ID: {{item.shopid}}</text>
+        <text class="shop-name">{{item.shop_name}}</text>
+      </view>
+    </view>
+  </view>
+  <!-- 空状态提示 -->
+  <view wx:if="{{filteredshops.length === 0}}" class="empty-state">
+    <text class="empty-text">暂无店铺数据</text>
+  </view>
+  <!-- 删除按钮 -->
+  <view class="delete-btn-container">
+    <button
+      class="delete-btn"
+      bindtap="handleDelete"
+      disabled="{{selectedshops.length === 0}}"
+    >
+      删除选中 ({{selectedshops.length}})
+    </button>
+  </view>
+</view>
