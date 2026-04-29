@@ -1,0 +1,18 @@
+<view class="container">
+  <!-- Logo 和标题 -->
+  <view class="logo-section">
+    <image class="logo" src="https://s41.ax1x.com/2026/01/29/pZfCNZt.png" mode="aspectFit"></image>
+    <text class="title">管理员登录</text>
+  </view>
+  <!-- 登录表单 -->
+  <view class="form">
+    <input style="width: 670rpx; display: block; box-sizing: border-box" class="input" placeholder="工号" value="{{workId}}" bindinput="onWorkIdInput" />
+    <input style="width: 670rpx; display: block; box-sizing: border-box" class="input" placeholder="密码" type="password" value="{{password}}"password="{{true}}"bindinput="onPasswordInput" />
+    <text class="forget-password" bindtap="goToForgetPassword">忘记密码?</text>
+    <button class="login-btn" bindtap="onAdminLogin">登录</button>
+  </view>
+  <!-- 底部链接 -->
+  <view class="links">
+    <text class="link" bindtap="goToUserLogin">返回用户登录</text>
+  </view>
+</view>

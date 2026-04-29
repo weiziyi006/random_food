@@ -1,0 +1,34 @@
+<view class="container">
+  <!-- Logo 和标题 -->
+  <view class="logo-section">
+    <image class="logo" src="https://s41.ax1x.com/2026/01/29/pZfCNZt.png" mode="aspectFit"></image>
+    <text class="title">舌尖盲旅</text>
+    <text class="subtitle">SHEJIANMANGLV</text>
+  </view>
+  <!-- 登录方式切换 -->
+  <view class="tab-bar">
+    <view class="tab-item {{currentTab === 0 ? 'active' : ''}}" data-tab="0" bindtap="switchTab">账号密码登录</view>
+    <view class="tab-item {{currentTab === 1 ? 'active' : ''}}" data-tab="1" bindtap="switchTab">手机验证登录</view>
+  </view>
+  <!-- 账号密码登录表单 -->
+  <view class="form" wx:if="{{currentTab === 0}}">
+    <input style="width: 670rpx; display: block; box-sizing: border-box" class="input" placeholder="手机号" value="{{account}}" bindinput="onAccountInput" />
+    <input style="width: 670rpx; display: block; box-sizing: border-box" class="input" placeholder="密码" type="password" value="{{password}}"password="{{true}}" bindinput="onPasswordInput" />
+    <text class="forget-password" bindtap="goToForgetPassword">忘记密码?</text>
+    <button class="login-btn" bindtap="onAccountLogin">登录</button>
+  </view>
+  <!-- 手机验证登录表单 -->
+  <view class="form" wx:if="{{currentTab === 1}}">
+    <input style="width: 670rpx; display: block; box-sizing: border-box" class="input" placeholder="手机号" value="{{phone}}" bindinput="onPhoneInput" />
+    <view class="code-input">
+      <input class="input" placeholder="验证码" value="{{code}}" bindinput="onCodeInput" />
+      <button class="get-code-btn" bindtap="getCode" disabled="{{codeBtnDisabled}}" style="width: 288rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx">{{codeBtnText}}</button>
+    </view>
+    <button class="login-btn" bindtap="onPhoneLogin" style="position: relative; left: 0rpx; top: 26rpx">登录</button>
+  </view>
+  <!-- 底部链接 -->
+  <view class="links">
+    <text class="link" bindtap="goToRegister">没有账号？点击注册</text>
+    <text class="link admin-link" bindtap="goToAdminLogin">我是管理员 点击登录</text>
+  </view>
+</view>

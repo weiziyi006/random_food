@@ -1,0 +1,117 @@
+.container {
+  background: #fff;
+  min-height: 100vh;
+  padding-bottom: 100rpx;
+}
+.upload-area {
+  display: flex;
+  padding: 60rpx;
+  gap: 60rpx;
+  flex-wrap: wrap;
+}
+.upload-item {
+  width: 200rpx;
+  height: 200rpx;
+  border: 2rpx dashed #ccc;
+  border-radius: 12rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+}
+.upload-item.uploaded {
+  border: none;
+  position: relative;
+}
+.preview-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 12rpx;
+}
+.delete-btn {
+  position: absolute;
+  top: -10rpx;
+  right: -10rpx;
+  width: 40rpx;
+  height: 40rpx;
+  background: #000;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40rpx;
+  font-size: 24rpx;
+}
+.icon {
+  font-size: 48rpx;
+  margin-bottom: 10rpx;
+}
+.score-area {
+  display: flex;
+  align-items: center;
+  padding: 30rpx;
+}
+.score-text {
+  font-size: 30rpx;
+  margin-right: 30rpx;
+}
+.stars {
+  display: flex;
+  gap: 10rpx;
+}
+.star {
+  font-size: 40rpx;
+  color: #ccc;
+}
+.star.active {
+  color:#fba511e0;
+}
+.score-tip {
+  margin-left: 20rpx;
+  font-size: 28rpx;
+  color: #666;
+  line-height: 1;
+}
+.question {
+  padding: 0 30rpx 30rpx;
+  color: #999;
+  font-size: 28rpx;
+}
+.input-area {
+  padding: 0 30rpx 40rpx;
+}
+textarea {
+  width: 100%;
+  min-height: 180rpx;
+  background: #f7f7f7;
+  border-radius: 16rpx;
+  padding: 20rpx;
+  font-size: 28rpx;
+  box-sizing: border-box;
+  border: 1rpx solid #eee;
+}
+.submit-btn {
+  width: 90%;
+  margin: 30rpx auto;
+  background: #fba511e0;
+  color: #fff;
+  border-radius: 10rpx;
+  font-size: 32rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  border: none;
+}
+.submit-btn::after {
+  border: none;
+}
+
+.anonymous {
+  display: flex;
+  align-items: center;
+  padding: 0 30rpx;
+  color: #666;
+  font-size: 28rpx;
+}
+.anonymous checkbox {
+  margin-right: 10rpx;
+}

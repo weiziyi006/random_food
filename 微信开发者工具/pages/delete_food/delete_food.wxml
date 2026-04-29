@@ -1,0 +1,51 @@
+<view class="container">
+  <!-- 页面标题 -->
+  <view class="page-header">
+    <text class="title">删除菜品大类</text>
+  </view>
+  <!-- 搜索栏 -->
+  <view class="search-container">
+    <input
+      class="search-input"
+      placeholder="搜索菜品大类名称或ID"
+      value="{{searchValue}}"
+      bindinput="onSearchInput"
+    />
+    <icon type="search" size="18" color="#FF7A2F" class="search-icon" />
+  </view>
+  <!-- 菜品大类列表 -->
+  <view class="category-list">
+    <view
+      wx:for="{{filteredCategories}}"
+      wx:key="categoryid"
+      class="category-item {{item.checked ? 'category-item-checked' : ''}}"
+      bindtap="onItemTap"
+      data-id="{{item.categoryid}}"
+      data-checked="{{item.checked}}"
+    >
+      <view class="checkbox-wrapper">
+        <checkbox
+          value="{{item.categoryid}}"
+          checked="{{item.checked}}"
+        />
+      </view>
+      <view class="category-info">
+        <text class="category-id">ID: {{item.categoryid}}</text>
+        <text class="category-name">{{item.category_name}}</text>
+      </view>
+    </view>
+  </view>
+  <!-- 空状态提示 -->
+  <view wx:if="{{filteredCategories.length === 0}}" class="empty-state">
+    <text class="empty-text">暂无菜品大类数据</text>
+  </view>
+  <!-- 删除按钮 -->
+  <view class="delete-btn-container">
+    <button
+  class="delete-btn {{selectedCategories.length === 0 ? 'disabled' : ''}}"
+  bindtap="handleDelete"
+  >
+  删除选中 ({{selectedCategories.length}})
+  </button>
+  </view>
+</view>

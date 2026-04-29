@@ -1,0 +1,45 @@
+<view class="container">
+  <view class="upload-area">
+    <view wx:for="{{uploadedImages}}" wx:key="*this" class="upload-item uploaded">
+      <image src="{{item}}" class="preview-img" />
+      <view class="delete-btn" bindtap="deleteImg" data-index="{{index}}">×</view>
+    </view>
+    <view class="upload-item" bindtap="chooseImage">
+      <view class="icon">📷</view>
+      <text>添加图片</text>
+    </view>
+    <view class="upload-item" bindtap="chooseVideo">
+      <view class="icon">🎥</view>
+      <text>添加视频</text>
+    </view>
+  </view>
+  <view class="score-area">
+    <text class="score-text">综合评分</text>
+    <view class="stars">
+      <view class="star {{score >= 1 ? 'active' : ''}}" bindtap="setScore" data-score="1">★</view>
+      <view class="star {{score >= 2 ? 'active' : ''}}" bindtap="setScore" data-score="2">★</view>
+      <view class="star {{score >= 3 ? 'active' : ''}}" bindtap="setScore" data-score="3">★</view>
+      <view class="star {{score >= 4 ? 'active' : ''}}" bindtap="setScore" data-score="4">★</view>
+      <view class="star {{score >= 5 ? 'active' : ''}}" bindtap="setScore" data-score="5">★</view>
+    </view>
+    <text class="score-tip" wx:if="{{score > 0}}">
+      {{score == 1 ? '较差' : score == 2 ? '一般' : score == 3 ? '良好' : score == 4 ? '满意' : '非常好'}}
+    </text>
+  </view>
+  <view class="question">
+    <text>{{currentQuestion}}</text>
+  </view>
+  <view class="input-area">
+    <textarea 
+      placeholder="请输入你的评价~" 
+      auto-height 
+      bindinput="handleInput" 
+      value="{{evaluateContent}}"
+    ></textarea>
+  </view>
+  <button class="submit-btn" bindtap="submitEvaluate">提交评价</button>
+  <view class="anonymous">
+    <checkbox checked="{{isAnonymous}}" bindtap="toggleAnonymous" />
+    <text>匿名评价</text>
+  </view>
+</view>

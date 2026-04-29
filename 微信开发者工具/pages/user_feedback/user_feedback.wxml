@@ -1,0 +1,13 @@
+<view class="container">
+  <view class="feedback-list">
+    <view wx:if="{{feedbackList.length > 0}}">
+      <view wx:for="{{feedbackList}}" wx:key="id" class="feedback-item">
+        <view class="feedback-content">{{item.content}}</view>
+        <view class="feedback-meta">
+          <text>用户邮箱：{{item.email || '未提供'}}</text>
+        </view>
+      </view>
+    </view>
+    <view wx:else class="empty-tip">暂无用户反馈</view>
+  </view>
+</view>

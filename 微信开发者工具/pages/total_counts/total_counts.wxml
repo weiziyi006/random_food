@@ -1,0 +1,38 @@
+<view class="container">
+  <view class="header">
+    <text class="title">管理员中心</text>
+    <text class="subtitle">数据总览与操作</text>
+  </view>
+  <view class="stats-row">
+    <view class="stat-card food-card">
+      <view class="stat-icon">🍽️</view>
+      <view class="stat-content">
+        <text class="stat-label">菜品总数</text>
+        <text class="stat-value">{{categoryCount}}</text>
+      </view>
+    </view>
+    <view class="stat-card shop-card">
+      <view class="stat-icon">🏪</view>
+      <view class="stat-content">
+        <text class="stat-label">店铺总数</text>
+        <text class="stat-value">{{shopCount}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="section">
+    <text class="section-title">菜品管理</text>
+    <view class="btn-group">
+      <button bindtap="goToAddFood" class="btn btn-primary" style="position: relative; left: 0rpx; top: 4rpx; width: 286rpx; display: flex; box-sizing: border-box">添加菜品</button>
+      <button bindtap="goToDeleteFood" class="btn btn-outline" style="position: relative; left: 0rpx; top: 4rpx">删除菜品</button>
+    </view>
+  </view>
+  <view class="section">
+    <text class="section-title">店铺管理</text>
+    <view class="btn-group">
+      <button bindtap="goToAddShop" class="btn btn-primary" style="position: relative; left: 0rpx; top: 4rpx">添加店铺</button>
+      <button bindtap="goToDeleteShop" class="btn btn-outline" style="position: relative; left: 0rpx; top: 4rpx">删除店铺</button>
+    </view>
+  </view>
+  <button bindtap="goToUserFeedback" class="btn-back" style="position: relative; left: 0rpx; top: 4rpx">用户反馈</button>
+  <button bindtap="goToUserLogin" class="btn-back">返回用户登录</button>
+</view>

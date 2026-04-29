@@ -1,0 +1,83 @@
+{
+  "setting": {
+    "urlCheck": false,
+    "compileHotReLoad": true,
+    "coverView": false,
+    "lazyloadPlaceholderEnable": false,
+    "skylineRenderEnable": false,
+    "preloadBackgroundData": false,
+    "autoAudits": false,
+    "useApiHook": true,
+    "showShadowRootInWxmlPanel": false,
+    "useStaticServer": false,
+    "useLanDebug": false,
+    "showES6CompileOption": false,
+    "checkInvalidKey": true,
+    "ignoreDevUnusedFiles": true,
+    "bigPackageSizeSupport": false
+  },
+  "projectname": "%E8%88%8C%E5%B0%96%E7%9B%B2%E6%97%85",
+  "condition": {
+    "miniprogram": {
+      "list": [
+        {
+          "name": "pages/evaluate/evaluate",
+          "pathName": "pages/evaluate/evaluate",
+          "query": "",
+          "scene": null,
+          "launchMode": "default"
+        },
+        {
+          "name": "pages/rank/rank",
+          "pathName": "pages/rank/rank",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/my/my",
+          "pathName": "pages/my/my",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/advise/advise",
+          "pathName": "pages/advise/advise",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/evaluate/evaluate",
+          "pathName": "pages/evaluate/evaluate",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/record/record",
+          "pathName": "pages/record/record",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/total_counts/total_counts",
+          "pathName": "pages/total_counts/total_counts",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/random1/random1",
+          "pathName": "pages/random1/random1",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        }
+      ]
+    }
+  },
+  "libVersion": "3.15.2"
+}

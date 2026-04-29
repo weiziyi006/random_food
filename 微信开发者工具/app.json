@@ -1,0 +1,55 @@
+{
+  "pages": [
+    "pages/user_login/user_login",
+    "pages/register/register",
+    "pages/forget_password/forget_password",
+    "pages/random1/random1",
+    "pages/random2/random2",
+    "pages/admin_login/admin_login",
+    "pages/forget_password_admin/forget_password_admin",
+    "pages/total_counts/total_counts",
+    "pages/add_food/add_food",
+    "pages/add_shop/add_shop",
+    "pages/delete_shop/delete_shop",
+    "pages/delete_food/delete_food",
+    "pages/advise/advise",
+    "pages/my/my",
+    "pages/feedback/feedback",
+    "pages/rank/rank",
+    "pages/collect/collect",
+    "pages/record/record",
+    "pages/user_feedback/user_feedback",
+    "pages/evaluate/evaluate"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#f8f8f8",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#666666",
+    "selectedColor": "#FF6700",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/random1/random1",
+        "text": "主页",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home_active.png"
+      },
+      {
+        "pagePath": "pages/advise/advise",
+        "text": "推荐",
+        "iconPath": "images/advise.png",
+        "selectedIconPath": "images/advise_active.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "images/my.png",
+        "selectedIconPath": "images/my_active.png"
+      }
+    ]
+  }
+}
